@@ -98,86 +98,10 @@
 
   </main>
 
-  <!-- Botão de download do currículo -->
-  <div style="text-align: center; margin: 40px 0;">
-    <button id="baixarPDF" class="botao">
-      <i class="fa-solid fa-file-arrow-down"></i> Baixar Currículo em PDF
-    </button>
-  </div>
-
   <footer class="contato">
     <p>E-mail: mauro53custodio@outlook.com | Telefone: (18) 9 9644-9343</p>
     <a href="mailto:mauro53custodio@outlook.com" class="botao">Contato</a>
   </footer>
-
-  <!-- Currículo em layout limpo para exportação PDF -->
-  <div id="curriculo-pdf" style="display:none; padding: 20px; font-family: Arial, sans-serif; color: #000;">
-    <h1 style="color:#000;">Mauro Vinicius Custódio</h1>
-    <p><strong>Telefone:</strong> (18) 99644-9343</p>
-    <p><strong>E-mail:</strong> mauro53custodio@outlook.com</p>
-    <p><strong>LinkedIn:</strong> linkedin.com/in/mauro-vinicius-custódio-a7164616a</p>
-    <hr>
-
-    <h2>Sobre Mim</h2>
-    <p>Sou um desenvolvedor front-end em início de carreira com mais de 1 ano de experiência em análise de redes. Tenho paixão por tecnologias inovadoras e sou proativo, dedicado e com boa comunicação.</p>
-
-    <h2>Habilidades</h2>
-    <ul>
-      <li>HTML5, CSS3, JavaScript</li>
-      <li>Python, PHP, Node.js</li>
-      <li>Acessibilidade web</li>
-      <li>Git, Scrum, Kanban</li>
-      <li>Figma</li>
-      <li>Linux (básico)</li>
-    </ul>
-
-    <h2>Experiência Profissional</h2>
-    <p><strong>Tellius Telecom</strong> — Técnico de Suporte (03/2023 - 07/2025)</p>
-    <ul>
-      <li>Configuração de roteadores e Mikrotik</li>
-      <li>Implantação de sistemas ERP (ex: TOTVS)</li>
-      <li>Integrações com APIs e aplicativos internos</li>
-    </ul>
-
-    <p><strong>Mac Atacado</strong> — Faturista (01/2021 - 03/2023)</p>
-    <ul>
-      <li>Emissão e conferência de notas fiscais</li>
-      <li>Auxílio na área financeira e controle logístico</li>
-    </ul>
-
-    <h2>Formação Acadêmica</h2>
-    <p><strong>Centro Universitário Católico Salesiano Auxilium</strong><br>
-    Curso: Análise e Desenvolvimento de Sistemas<br>
-    Conclusão: 2024</p>
-
-    <h2>Projetos</h2>
-    <ul>
-      <li>Thorin Miner — Comparador de preços (<a href="https://thorinminer.com.br/">thorinminer.com.br</a>)</li>
-      <li>Site Flash — Treinamento front-end (<a href="https://github.com/HakunaMauroVinicis/siteFlash">GitHub</a>)</li>
-      <li>Spells D&D — Lista de magias (<a href="https://spells.thorimminer.com.br/">spells.thorimminer.com.br</a>)</li>
-    </ul>
-  </div>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script>
-    document.getElementById("baixarPDF").addEventListener("click", () => {
-      const elemento = document.getElementById("curriculo-pdf");
-      elemento.style.display = "block";
-
-      const opt = {
-        margin:       0.3,
-        filename:     'Curriculo-Mauro-Vinicius.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-      };
-
-      html2pdf().set(opt).from(elemento).save().then(() => {
-        elemento.style.display = "none";
-      });
-    });
-  </script>
 
 </body>
 </html>
