@@ -102,6 +102,26 @@
         <p>E-mail: mauro53custodio@outlook.com | Telefone: (18) 9 9644-9343</p>
         <a href="mailto:mauro53custodio@outlook.com" class="botao">Contato</a>
     </footer>
+    <button id="baixar-curriculo" class="botao" style="margin: 20px auto; display: block;">
+        <i class="fa-solid fa-file-arrow-down"></i> Baixar Currículo em PDF
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('baixar-curriculo').addEventListener('click', () => {
+            const element = document.querySelector('main');
+            const opt = {
+                margin:       0.5,
+                filename:     'Curriculo-Mauro-Vinicius.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+    
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+
 
 </body>
 </html>
